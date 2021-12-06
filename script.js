@@ -3,10 +3,13 @@ const isNumber = function (num) {
     return !isNaN(parseFloat(num)) && isFinite(num);
 };
 function gameBot(num) {
-
-
     function two() {
-        question = parseFloat(prompt('Угадай число от 1 до 100'));
+        let answer = prompt('Угадай число от 1 до 100');
+        if (answer === null) {
+            alert('Игра окончена');
+            return;
+        }
+        question = parseFloat(answer);
         if (question === num) {
             alert('Поздравляю, Вы угадали!!! ' + 'Число: ' + question)
         }
@@ -28,5 +31,4 @@ function gameBot(num) {
     }
     two()
 }
-
 gameBot(Math.floor(Math.random() * 100));
