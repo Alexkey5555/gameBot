@@ -25,9 +25,6 @@ function gameBot(num) {
             alert('Загаданное число больше');
             two()
         }
-        else if (question === num) {
-            alert('Поздравляю, Вы угадали!!! ' + 'Число: ' + question)
-        }
     }
     two()
 }
